@@ -12,12 +12,12 @@ Parameters:
 Resources:
   MXRecord:
     Type: 'AWS::Route53::RecordSet'
-      Properties:
-        HostedZoneId: !Ref 'HostedZoneId'
-        Name: !Sub: '${Domain}.'
-        Type: 'MX'
-        TTL: '3600'
-        ResourceRecords: !Sub: '0 ${MXPointsTo}'
+    Properties:
+      HostedZoneId: !Ref 'HostedZoneId'
+      Name: !Sub: '${Domain}.'
+      Type: 'MX'
+      TTL: '3600'
+      ResourceRecords: !Sub: '0 ${MXPointsTo}'
   MSOIDRecord:
     Type: 'AWS::Route53::RecordSet'
     Properties:
