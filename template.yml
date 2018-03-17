@@ -14,15 +14,16 @@ Resources:
     Type: 'AWS::Route53::RecordSet'
     Properties:
       HostedZoneId: !Ref 'HostedZoneId'
-      Name: !Sub: '${Domain}.'
+      Name: !Sub '${Domain}.'
       Type: 'MX'
       TTL: '3600'
-      ResourceRecords: !Sub: '0 ${MXPointsTo}'
+      ResourceRecords: 
+        - !Sub '0 ${MXPointsTo}'
   MSOIDRecord:
     Type: 'AWS::Route53::RecordSet'
     Properties:
       HostedZoneId: !Ref 'HostedZoneId'
-      Name: !Sub: 'msoid.${Domain}.'
+      Name: !Sub 'msoid.${Domain}.'
       Type: 'CNAME'
       TTL: '3600'
       ResourceRecords:
@@ -37,14 +38,14 @@ Resources:
       ResourceRecords:
         - 'autodiscover.outlook.com'
   SIPRecord:
-   Type: 'AWS::Route53::RecordSet'
-   Properties:
-     HostedZoneId: !Ref 'HostedZoneId'
-     Name: !Sub: 'sip.${Domain}.'
-     Type: 'CNAME'
-     TTL: '3600'
-     ResourceRecords:
-      - 'sipdir.online.lync.com'
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      HostedZoneId: !Ref 'HostedZoneId'
+      Name: !Sub 'sip.${Domain}.'
+      Type: 'CNAME'
+      TTL: '3600'
+      ResourceRecords:
+        - 'sipdir.online.lync.com'
   LDRecord:
     Type: 'AWS::Route53::RecordSet'
     Properties:
