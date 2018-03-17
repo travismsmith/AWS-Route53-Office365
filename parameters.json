@@ -1,0 +1,14 @@
+[
+  {
+    "ParameterKey": "HostedZoneId",
+    "ParameterValue": ""
+  },
+  {
+    "ParameterKey": "Domain",
+    "ParameterValue": ""
+  }, 
+  {
+    "ParameterKey": "MXPointsTo",
+    "ParameterValue": ""
+  }
+]
